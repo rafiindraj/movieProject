@@ -7,6 +7,7 @@ import Banner from "../components/Banner";
 import requests from "../utils/requests";
 // import { Props } from "next/script";
 import { Movie } from "../interface";
+import Row from "../components/Row";
 const inter = Inter({ subsets: ["latin"] });
 
 interface Props{
