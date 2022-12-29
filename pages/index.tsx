@@ -4,9 +4,11 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
+import requests from "../utils/requests";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // console.log(trendingNow);
   return (
     <>
       <div className="relative h-screen bg-gradient-to-b from-lightgray to-slate-400 lg:h-[140-vh] flex-col items-center justify-center py-2">
@@ -134,4 +136,19 @@ export default function Home() {
       </main> */}
     </>
   );
+}
+
+//to server side fetch data from api
+export const getServerSideProps = async () =>{
+  const [
+    trendingNow,
+  ] = await Promise.all([
+    fetch(requests.fetchTrending).then((res) => res.json()),
+  ])
+
+  return{
+    props: {
+      trendingNow: trendingNow.results
+    }
+  }
 }
