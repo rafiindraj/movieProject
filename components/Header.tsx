@@ -25,12 +25,6 @@ function Header() {
   return (
     <header className={`${isScrolled && 'bg-[lightgray]'}`}>
       <div className="flex items-center space-x-2 md:space-x-10">
-      {/* <img
-          src="https://rb.gy/ulxxee" 
-          width={100}
-          height={100}
-          className="cursor-pointer object-contain"
-        /> */}   
         <h1 className="font-bold italic text-lg text-white">ANIMEFLIX</h1>
       </div> 
       <ul className="hidden space-x-4 md:flex">
