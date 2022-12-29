@@ -10,8 +10,8 @@ function Banner() {
             <div className="absolute top-0 left-0 -z-10 h-[95vh] w-screen">
             </div>
 
-            <h1 className="text-2xl font-bold md:text-4xl lg:text-7xl">
-                ANIME MOVIE
+            <h1 className="text-xl font-bold md:text-4xl lg:text-7xl">
+                This Anime Movie
             </h1>
             <p className="max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
                 this is the best anime on planet espicially in indonesia

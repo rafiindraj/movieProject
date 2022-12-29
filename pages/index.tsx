@@ -26,11 +26,19 @@ export default function Home({trendingNow}:Props) {
         </Head>
         {/* Lets Build Movie App  */}
         <Header/>
-        <main>
+        <main className="relative pl-4 pb-24 lg:space-y-24 lg:pl-16">
           <Banner/>
-            <section>
+          <section className="md:space-y-24">
+          <Row title="Trending Now" />
+          <Row title="Top Rated" />
+          <Row title="Action"/>
+          {/* My List */}
 
-            </section>
+          <Row title="Comedies" />
+          <Row title="Scary Anime" />
+          <Row title="Romance Anime" />
+          <Row title="Documentaries"/>
+        </section>
         </main>
       </div>
 
