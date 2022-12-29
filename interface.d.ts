@@ -1,4 +1,4 @@
-export interface Movies{
+export interface Movie{
  mal_id: number;
     url: string;
     images: Images;

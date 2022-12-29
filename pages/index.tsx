@@ -5,10 +5,16 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import requests from "../utils/requests";
+// import { Props } from "next/script";
+import { Movie } from "../interface";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  // console.log(trendingNow);
+interface Props{
+  trendingNow: Movie[]
+}
+
+export default function Home({trendingNow}:Props) {
+  console.log(trendingNow);
   return (
     <>
       <div className="relative h-screen bg-gradient-to-b from-lightgray to-slate-400 lg:h-[140-vh] flex-col items-center justify-center py-2">
@@ -21,9 +27,7 @@ export default function Home() {
         {/* Lets Build Movie App  */}
         <Header/>
         <main>
-          {/* <Banner>
-
-          </Banner> */}
+          <Banner/>
             <section>
 
             </section>
@@ -139,16 +143,16 @@ export default function Home() {
 }
 
 //to server side fetch data from api
-export const getServerSideProps = async () =>{
-  const [
-    trendingNow,
-  ] = await Promise.all([
-    fetch(requests.fetchTrending).then((res) => res.json()),
-  ])
+// export const getServerSideProps = async () =>{
+//   const [s
+//     trendingNow,
+//   ] = await Promise.all([
+//     fetch(requests.fetchTrending).then((res) => res.json()),
+//   ])
 
-  return{
-    props: {
-      trendingNow: trendingNow.results
-    }
-  }
-}
+//   return{
+//     props: {
+//       trendingNow: trendingNow.results
+//     }
+//   }
+// }
